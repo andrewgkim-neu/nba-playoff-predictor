@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m py_compile src/model.py)",
+      "Bash(python3 -c \"import pandas, numpy; print\\('pandas', pandas.__version__, 'numpy', numpy.__version__\\)\")",
+      "Bash(python3 -m venv /private/tmp/claude-501/-Users-andrewgkim-nba-playoff-predictor/0dc21725-41c2-4e6d-93ff-a7b40fa2934c/scratchpad/venv)",
+      "Bash(/private/tmp/claude-501/-Users-andrewgkim-nba-playoff-predictor/0dc21725-41c2-4e6d-93ff-a7b40fa2934c/scratchpad/venv/bin/pip install *)",
+      "Bash(/private/tmp/claude-501/-Users-andrewgkim-nba-playoff-predictor/0dc21725-41c2-4e6d-93ff-a7b40fa2934c/scratchpad/venv/bin/python *)",
+      "Bash(PYTHONPATH=/Users/andrewgkim/nba-playoff-predictor /private/tmp/claude-501/-Users-andrewgkim-nba-playoff-predictor/0dc21725-41c2-4e6d-93ff-a7b40fa2934c/scratchpad/venv/bin/python *)",
+      "Bash(python3 -m py_compile src/reshape_sbr.py)",
+      "Bash(python3 -m py_compile src/build_player_stats.py src/build_player_profiles.py src/draft.py)",
+      "Bash(.venv/bin/python -m src.build_player_stats)",
+      "Bash(.venv/bin/python -m src.build_player_profiles)",
+      "Bash(.venv/bin/python -m src.draft pool --year 2022-23 --basis playoffs --top 12)",
+      "Bash(.venv/bin/python -m src.draft pool --year 2022-23 --basis regular --top 10)",
+      "Bash(.venv/bin/python -m src.draft score --year 2022-23 --basis regular --budget 100 --players 'Nikola Jokic, Jamal Murray, Aaron Gordon, Michael Porter Jr., Kentavious Caldwell-Pope, Bruce Brown, Jeff Green')",
+      "Bash(python3 -m py_compile src/draft.py)",
+      "Bash(.venv/bin/python -m src.draft score --year 2022-23 --basis playoffs --budget 100 --players 'Nikola Jokic, Jamal Murray, Aaron Gordon, Michael Porter Jr., Kentavious Caldwell-Pope, Bruce Brown, Jeff Green')",
+      "Bash(.venv/bin/python -m src.draft score --year 2022-23 --basis playoffs --budget 250 --players 'Nikola Jokic, Jamal Murray, Aaron Gordon, Michael Porter Jr., Kentavious Caldwell-Pope, Bruce Brown, Jeff Green, Christian Braun')",
+      "Bash(.venv/bin/python -m src.draft score --year 2022-23 --basis regular --budget 100 --players 'Bruce Brown, Jeff Green, Christian Braun, Kentavious Caldwell-Pope, Aaron Gordon')",
+      "Bash(gh auth *)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}

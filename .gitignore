@@ -1,0 +1,31 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+.env
+
+# Data — don't commit your local cache or DB
+data/nba.db
+data/nba.db-journal
+data/raw/*
+!data/raw/.gitkeep
+
+# Notebooks
+.ipynb_checkpoints/
+notebooks/*.ipynb_checkpoints/
+
+# Build / packaging
+*.egg-info/
+build/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
